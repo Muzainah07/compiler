@@ -1,0 +1,13 @@
+
+#roast {
+    shots coffee;
+    bean milk;
+
+    coffee = 5
+    milk = 2;
+
+    pull("Coffee is ready!");
+    
+    coffee = ;
+}
+#brew_end

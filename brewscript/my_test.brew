@@ -1,0 +1,13 @@
+#roast
+{
+    shots @weird;
+    shots 3abc;
+    bean origin;
+    origin = 'arabica;
+    shots big_number;
+    big_number = 123456789;
+    pull("missing close paren";
+    /* this comment never closes
+    pull("still inside the comment");
+}
+#brew_end
