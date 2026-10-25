@@ -12,7 +12,7 @@ The lexical analyzer reads the source code and converts it into tokens. After th
 - `recursive_descent_parser.py` – Checks the tokens according to the CFG.
 - `main.py` – Runs the lexical analyzer and parser.
 - `valid_test.brew` – Used to test a valid program.
-- `invalid_syntax.brew` – Used to test a program with a syntax error.
+- `syntax_error_test.brew` – Used to test a program with a syntax error.
 - `lexical_errors.brew` – Used to test lexical errors.
 
 Keep these files in the same project folder.
@@ -29,44 +29,6 @@ Keep these files in the same project folder.
 3. Enter the name of the `.brew` file when asked.
 4. Check the output to see the tokens and parsing result.
 
-## Test Cases
-
-### 1. Successful Parsing
-
-Save the following code in `valid_test.brew`:
-
-```text
-#roast {
-    shots pumps;
-    pumps = 5;
-    pull("Hello, BrewScript!");
-}
-#brew_end
-```
-
-**Expected result:** The lexer generates the tokens, and the parser confirms that the program follows the CFG.
-
-### 2. Unsuccessful Parsing 
-
-Save this code in `my_test.brew`:
-
-```text
-##roast
-{
-    shots @weird;
-    shots 3abc;
-    bean origin;
-    origin = 'arabica;
-    shots big_number;
-    big_number = 123456789;
-    pull("missing close paren";
-    /* this comment never closes
-    pull("still inside the comment");
-}
-#brew_end
-```
-
-**Expected result:** The lexer should display the lexical errors it detects. The parser's result will depend on how the main program handles the tokens when lexical errors are present.
 
 ## Context-Free Grammar (CFG)
 

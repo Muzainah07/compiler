@@ -25,7 +25,7 @@ def display_tokens(tokens):
 def main():
     filename = input(
         "Enter BrewScript file name "
-        "(for example, my_test.brew, valid_test.brew, invalid_test.brew): "
+        "(for example, my_test.brew, valid_test.brew, syntax_error_test.brew): "
     ).strip()
 
     try:
